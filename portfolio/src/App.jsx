@@ -261,8 +261,7 @@ export default function App() {
         #jogo{
           scroll-margin-top: 90px;
         }
-        /* MOBILE ONLY - Desktop fica 100% igual ao original */
-        .mobile-menu-btn{display:none}
+        mobile-menu-btn{display:none}
         .joystick{display:none}
         .header-nav-desktop{display:flex; gap:30px; font-size:20px; align-items:center}
         @media (max-width: 900px){
@@ -270,22 +269,24 @@ export default function App() {
           .mobile-menu-btn{display:grid !important}
           .joystick{display:flex !important}
           .game-wrapper{display:none !important}
-          section[style*="gridTemplateColumns: 1.15fr"]{grid-template-columns:1fr !important; padding:24px 16px !important}
-          section[style*="gridTemplateColumns: 320px"]{grid-template-columns:1fr !important}
-          div[style*="gridTemplateColumns: repeat(3,1fr)"]{grid-template-columns:1fr !important}
-          div[style*="gridTemplateColumns: repeat(4,1fr)"]{grid-template-columns:repeat(2,1fr) !important}
-          div[style*="gridTemplateColumns: 1.2fr 0.8fr"]{grid-template-columns:1fr !important}
-          div[style*="gridTemplateColumns: 1fr 1fr"][style*="gap: 10"]{grid-template-columns:1fr !important}
+          section[style*="1.15fr"]{grid-template-columns:1fr !important; padding:24px 16px !important}
+          section[style*="320px"]{grid-template-columns:1fr !important}
+          div[style*="repeat(3,1fr)"]{grid-template-columns:1fr !important}
+          div[style*="1.2fr 0.8fr"]{grid-template-columns:1fr !important}
+          div[style*="1fr 1fr"][style*="gap: 10"]{grid-template-columns:1fr !important}
           header{padding:12px 16px !important}
+          #skills > div.glass{grid-template-columns:repeat(2, minmax(0,1fr)) !important; width:100% !important; box-sizing:border-box !important}
         }
         @media (max-width: 480px){
-          div[style*="gridTemplateColumns: repeat(2,1fr)"]{grid-template-columns:1fr !important}
+          #skills > div.glass{gap:10px !important; padding:12px !important}
+          .skill-orb-card{padding:10px !important; min-width:0 !important}
+          .skill-orb-card div:last-child{font-size:18px !important}
         }
       `}</style>
 
       <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: isMobile ? "12px 16px" : "14px 28px", borderBottom: "1px solid rgba(255,255,255,0.06)", position: "sticky", top: 0, background: "rgba(10,10,15,0.85)", backdropFilter: "blur(12px)", zIndex: 50 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}><div style={{ width: 36, height: 36, borderRadius: 10, background: "linear-gradient(135deg,#8b5cf6,#06ffa5)", display: "grid", placeItems: "center", fontWeight: 800, color: "#000" }}>TA</div>Portifolio Interativo</div>
-        <nav className="header-nav-desktop" style={{ display: isMobile ? "none" : "flex", gap: 30, fontSize: 20, alignItems: "center" }}><a href="#sobre" style={{ color: "#fff", textDecoration: "none" }}> SOBRE</a><a href="#projetos" style={{ color: "#fff", textDecoration: "none" }}> PROJETOS</a><a href="#skills" style={{ color: "#fff", textDecoration: "none" }}> SKILLS</a><a href="#contato" style={{ color: "#fff", textDecoration: "none" }}> CONTATO</a><button onClick={() => document.getElementById("jogo")?.scrollIntoView({ behavior: "smooth", block: "center" })} style={{ padding: "8px 16px", borderRadius: 20, background: "#fff", color: "#000", fontWeight: 700, border: "none", cursor: "pointer", transition: "all 0.25s cubic-bezier(0.34,1.56,0.64,1)" }} className="btn-jogar">🎮 JOGAR</button></nav>
+        <nav className="header-nav-desktop" style={{ display: isMobile ? "none" : "flex", gap: 30, fontSize: 20, alignItems: "center" }}><a href="#sobre" style={{ color: "#fff", textDecoration: "none" }}> SOBRE</a><a href="#projetos" style={{ color: "#fff", textDecoration: "none" }}> PROJETOS</a><a href="#skills" style={{ color: "#fff", textDecoration: "none" }}> SKILLS</a><a href="#contato" style={{ color: "#fff", textDecoration: "none" }}> CONTATO</a><button onClick={() => document.getElementById("jogo")?.scrollIntoView({ behavior: "smooth", block: "center" })} style={{ padding: "8px 16px", borderRadius: 20, background: "#fff", color: "#000", fontWeight: 700, border: "none", cursor: "pointer", transition: "all 0.25s cubic-bezier(0.34,1.56,0.64,1)" }} className="btn-jogar">JOGAR</button></nav>
         <button className="mobile-menu-btn" onClick={() => setMobileMenu(!mobileMenu)} style={{ width: 36, height: 36, borderRadius: 10, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", color: "#fff", display: isMobile ? "grid" : "none", placeItems: "center" }}>{mobileMenu ? "✕" : "☰"}</button>
       </header>
       {mobileMenu && (
@@ -294,7 +295,7 @@ export default function App() {
           <a href="#projetos" onClick={() => setMobileMenu(false)} style={{ padding: "12px", background: "rgba(255,255,255,0.05)", borderRadius: 10, color: "#fff", textDecoration: "none", fontWeight: 700 }}>PROJETOS</a>
           <a href="#skills" onClick={() => setMobileMenu(false)} style={{ padding: "12px", background: "rgba(255,255,255,0.05)", borderRadius: 10, color: "#fff", textDecoration: "none", fontWeight: 700 }}>SKILLS</a>
           <a href="#contato" onClick={() => setMobileMenu(false)} style={{ padding: "12px", background: "rgba(255,255,255,0.05)", borderRadius: 10, color: "#fff", textDecoration: "none", fontWeight: 700 }}>CONTATO</a>
-          <a href="#jogo" onClick={() => setMobileMenu(false)} style={{ padding: "12px", background: "#fff", borderRadius: 10, color: "#000", textDecoration: "none", fontWeight: 800, textAlign: "center" }}>🎮JOGAR</a>
+          <a href="#jogo" onClick={() => setMobileMenu(false)} style={{ padding: "12px", background: "#fff", borderRadius: 10, color: "#000", textDecoration: "none", fontWeight: 800, textAlign: "center" }}>JOGAR</a>
         </div>
       )}
 
