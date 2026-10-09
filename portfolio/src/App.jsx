@@ -285,8 +285,20 @@ export default function App() {
       `}</style>
 
       <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: isMobile ? "12px 16px" : "14px 28px", borderBottom: "1px solid rgba(255,255,255,0.06)", position: "sticky", top: 0, background: "rgba(10,10,15,0.85)", backdropFilter: "blur(12px)", zIndex: 50 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }}><div style={{ width: 36, height: 36, borderRadius: 10, background: "linear-gradient(135deg,#8b5cf6,#06ffa5)", display: "grid", placeItems: "center", fontWeight: 800, color: "#000" }}>TA</div>Portifolio Interativo</div>
-        <nav className="header-nav-desktop" style={{ display: isMobile ? "none" : "flex", gap: 30, fontSize: 20, alignItems: "center" }}><a href="#sobre" style={{ color: "#fff", textDecoration: "none" }}> SOBRE</a><a href="#projetos" style={{ color: "#fff", textDecoration: "none" }}> PROJETOS</a><a href="#skills" style={{ color: "#fff", textDecoration: "none" }}> SKILLS</a><a href="#contato" style={{ color: "#fff", textDecoration: "none" }}> CONTATO</a><button onClick={() => document.getElementById("jogo")?.scrollIntoView({ behavior: "smooth", block: "center" })} style={{ padding: "8px 16px", borderRadius: 20, background: "#fff", color: "#000", fontWeight: 700, border: "none", cursor: "pointer", transition: "all 0.25s cubic-bezier(0.34,1.56,0.64,1)" }} className="btn-jogar">JOGAR</button></nav>
+
+        {/* LADO ESQUERDO - os links */}
+        <nav className="header-nav-desktop" style={{ display: isMobile ? "none" : "flex", gap: 30, fontSize: 20, alignItems: "center" }}>
+          <a href="#sobre" style={{ color: "#fff", textDecoration: "none" }}> SOBRE</a>
+          <a href="#projetos" style={{ color: "#fff", textDecoration: "none" }}> PROJETOS</a>
+          <a href="#skills" style={{ color: "#fff", textDecoration: "none" }}> SKILLS</a>
+          <a href="#contato" style={{ color: "#fff", textDecoration: "none" }}> CONTATO</a>
+        </nav>
+
+        {/* LADO DIREITO - só o JOGAR sozinho */}
+        <div style={{ display: isMobile ? "none" : "flex", alignItems: "center" }}>
+          <button onClick={() => document.getElementById("jogo")?.scrollIntoView({ behavior: "smooth", block: "center" })} style={{ padding: "8px 16px", borderRadius: 20, background: "#fff", color: "#000", fontWeight: 700, border: "none", cursor: "pointer", transition: "all 0.25s cubic-bezier(0.34,1.56,0.64,1)" }} className="btn-jogar">JOGAR</button>
+        </div>
+
         <button className="mobile-menu-btn" onClick={() => setMobileMenu(!mobileMenu)} style={{ width: 36, height: 36, borderRadius: 10, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", color: "#fff", display: isMobile ? "grid" : "none", placeItems: "center" }}>{mobileMenu ? "✕" : "☰"}</button>
       </header>
       {mobileMenu && (
@@ -425,7 +437,7 @@ ${formData.msg}`;
             <div style={{ fontWeight: 700, marginBottom: 12 }}>Links diretos</div>
             <div style={{ display: "grid", gap: 10 }}>
               <a href="https://github.com/thiagoanchietapaiva-cloud?tab=repositories" target="_blank" rel="noopener noreferrer" style={{ padding: "12px 14px", borderRadius: 12, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", color: "#fff", textDecoration: "none", fontSize: 12, display: "flex", justifyContent: "space-between", transition: "all 0.2s ease" }} className="project-icon-btn">github.com/thiagoanchieta <span>↗</span></a>
-              <a href="https://wa.me/5585994062045" target="_blank" rel="noopener noreferrer" style={{ padding: "12px 14px", borderRadius: 12, background: "rgba(37,211,102,0.12)", border: "1px solid rgba(37,211,102,0.3)", color: "#25D366", textDecoration: "none", fontSize: 12, display: "flex", justifyContent: "space-between", fontWeight: 700, transition: "all 0.2s ease" }} className="project-icon-btn">💬 WhatsApp: +55 (85) 99406-2045 <span>↗</span></a>
+              <a href="https://wa.me/5585994062045" target="_blank" rel="noopener noreferrer" style={{ padding: "12px 14px", borderRadius: 12, background: "rgba(37,211,102,0.12)", border: "1px solid rgba(37,211,102,0.3)", color: "#25D366", textDecoration: "none", fontSize: 12, display: "flex", justifyContent: "space-between", fontWeight: 700, transition: "all 0.2s ease" }} className="project-icon-btn">WhatsApp: +55 (85) 99406-2045 <span>↗</span></a>
               <a href="mailto:thiagoanchietapaiva@gmail.com" style={{ padding: "12px 14px", borderRadius: 12, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", color: "#fff", textDecoration: "none", fontSize: 15, display: "flex", justifyContent: "space-between", transition: "all 0.2s ease" }} className="project-icon-btn">thiagoanchietapaiva@gmail.com <span>↗</span></a>
             </div>
             <div style={{ marginTop: 14, padding: "10px 12px", borderRadius: 10, background: "rgba(186, 36, 251, 0.54)", border: "1px solid rgba(251, 36, 201, 0.15)", fontSize: 10, opacity: 0.7, lineHeight: 1.4 }}>
