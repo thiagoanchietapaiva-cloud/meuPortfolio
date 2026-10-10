@@ -286,7 +286,6 @@ export default function App() {
 
       <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: isMobile ? "12px 16px" : "14px 28px", borderBottom: "1px solid rgba(255,255,255,0.06)", position: "sticky", top: 0, background: "rgba(10,10,15,0.85)", backdropFilter: "blur(12px)", zIndex: 50 }}>
 
-        {/* LADO ESQUERDO - os links */}
         <nav className="header-nav-desktop" style={{ display: isMobile ? "none" : "flex", gap: 30, fontSize: 20, alignItems: "center" }}>
           <a href="#sobre" style={{ color: "#fff", textDecoration: "none" }}> SOBRE</a>
           <a href="#projetos" style={{ color: "#fff", textDecoration: "none" }}> PROJETOS</a>
@@ -294,7 +293,6 @@ export default function App() {
           <a href="#contato" style={{ color: "#fff", textDecoration: "none" }}> CONTATO</a>
         </nav>
 
-        {/* LADO DIREITO - só o JOGAR sozinho */}
         <div style={{ display: isMobile ? "none" : "flex", alignItems: "center" }}>
           <button onClick={() => document.getElementById("jogo")?.scrollIntoView({ behavior: "smooth", block: "center" })} style={{ padding: "8px 16px", borderRadius: 20, background: "#fff", color: "#000", fontWeight: 700, border: "none", cursor: "pointer", transition: "all 0.25s cubic-bezier(0.34,1.56,0.64,1)" }} className="btn-jogar">JOGAR</button>
         </div>
@@ -337,7 +335,7 @@ export default function App() {
       </section>
 
       <section id="sobre" style={{ maxWidth: 1200, margin: "0 auto", padding: "20px 20px" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}><div style={{ width: 32, height: 32, borderRadius: 8, background: "#8b5cf6", display: "grid", placeItems: "center" }}>✦</div><h2 style={{ fontSize: 24, fontWeight: 800 }}>SOBRE_MIM</h2><div style={{ flex: 1, height: 1, background: "linear-gradient(90deg,rgba(139,92,246,0.3),transparent)", marginLeft: 12 }} /></div>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}><div style={{ width: 32, height: 32, borderRadius: 8, background: "#8b5cf6", display: "grid", placeItems: "center" }}></div><h2 style={{ fontSize: 24, fontWeight: 800 }}>SOBRE_MIM</h2><div style={{ flex: 1, height: 1, background: "linear-gradient(90deg,rgba(139,92,246,0.3),transparent)", marginLeft: 12 }} /></div>
         <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "320px 1fr", gap: 16 }}>
           <div className="glass" style={{ padding: 18, borderRadius: 20 }}>
             <div style={{ background: "linear-gradient(180deg,#1a1033,#0f1f1a)", borderRadius: 16, padding: 16, border: "1px solid rgba(255,255,255,0.08)", textAlign: "center" }}>
@@ -360,7 +358,7 @@ export default function App() {
       </section>
 
       <section id="projetos" style={{ maxWidth: 1200, margin: "0 auto", padding: "20px 20px" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}><div style={{ width: 32, height: 32, borderRadius: 8, background: "#06ffa5", display: "grid", placeItems: "center", color: "#000" }}>&lt;/&gt;</div><h2 style={{ fontSize: 24, fontWeight: 800 }}>PROJETOS</h2><div style={{ flex: 1, height: 1, background: "linear-gradient(90deg,rgba(6,255,165,0.3),transparent)", marginLeft: 12 }} /></div>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}><div style={{ width: 32, height: 32, borderRadius: 8, background: "#06ffa5", display: "grid", placeItems: "center", color: "#000" }}></div><h2 style={{ fontSize: 24, fontWeight: 800 }}>PROJETOS</h2><div style={{ flex: 1, height: 1, background: "linear-gradient(90deg,rgba(6,255,165,0.3),transparent)", marginLeft: 12 }} /></div>
         <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(3,1fr)", gap: 14 }}>
           {PROJECTS.map(p => (
             <div key={p.id} className="glass project-card" style={{ padding: 18 }}>
@@ -396,7 +394,7 @@ export default function App() {
       </section>
 
       <section id="contato" style={{ maxWidth: 1200, margin: "0 auto", padding: "20px 20px 60px" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}><div style={{ width: 32, height: 32, borderRadius: 8, background: "#fbbf24", display: "grid", placeItems: "center", color: "#000" }}>✉</div><h2 style={{ fontSize: 24, fontWeight: 800 }}>CONTATO</h2><div style={{ flex: 1, height: 1, background: "linear-gradient(90deg,rgba(251,191,36,0.3),transparent)", marginLeft: 12 }} /><span style={{ fontSize: 10, opacity: 0.4 }}>EASTER EGG: digite "dev"</span></div>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}><div style={{ width: 32, height: 32, borderRadius: 8, background: "#fbbf24", display: "grid", placeItems: "center", color: "#000" }}></div><h2 style={{ fontSize: 24, fontWeight: 800 }}>CONTATO</h2><div style={{ flex: 1, height: 1, background: "linear-gradient(90deg,rgba(251,191,36,0.3),transparent)", marginLeft: 12 }} /><span style={{ fontSize: 10, opacity: 0.4 }}>EASTER EGG: digite "dev"</span></div>
         <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1.2fr 0.8fr", gap: 16 }}>
           <div className="glass" style={{ padding: 18 }}>
             <div style={{ fontSize: 10, letterSpacing: "0.15em", opacity: 0.4, marginBottom: 12 }}>FORMULÁRIO • FUNCIONANDO</div>
