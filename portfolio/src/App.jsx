@@ -147,8 +147,8 @@ export default function App() {
         const ix = is.x * W + floatX; const iy = is.y * H + floatY; const iw = size, ih = size;
         const dist = Math.hypot(player.current.x - (is.x + is.w / 2), player.current.y - (is.y + is.h / 2));
         if (dist < 0.18) nearIsland = is;
-        ctx.fillStyle = "rgba(0,0,0,0.35)"; ctx.beginPath(); ctx.roundRect(ix + 2, iy + ih + 6, iw, 6, 3); ctx.fill();
-        ctx.fillStyle = "#15151f"; ctx.strokeStyle = is.color; ctx.lineWidth = nearIsland?.id === is.id ? 2.5 : 1.5;
+        ctx.fillStyle = "rgb(0, 0, 0)"; ctx.beginPath(); ctx.roundRect(ix + 2, iy + ih + 6, iw, 6, 3); ctx.fill();
+        ctx.fillStyle = "#070707"; ctx.strokeStyle = is.color; ctx.lineWidth = nearIsland?.id === is.id ? 2.5 : 1.5;
         if (nearIsland?.id === is.id) { ctx.shadowColor = is.color; ctx.shadowBlur = 18; }
         ctx.beginPath(); ctx.roundRect(ix, iy, iw, ih, 8); ctx.fill(); ctx.stroke(); ctx.shadowBlur = 0;
         const innerGrad = ctx.createLinearGradient(ix, iy, ix, iy + ih);
@@ -181,7 +181,7 @@ export default function App() {
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap');
         *{margin:0;padding:0;box-sizing:border-box}
         body{background:#0a0a0f;color:#fff;font-family:'JetBrains Mono',monospace}
-        .glass{background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:20px}
+        .glass{background:rgba(10, 10, 10, 0.96);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:20px}
         .nome-hover{ display:inline-block; cursor:pointer; transition: all 0.2s ease; }
         .nome-hover:hover{ animation: shakeNome 0.35s ease-in-out infinite; filter: drop-shadow(0 0 12px rgba(139,92,246,0.6)); }
         .nome-hover:hover span{ background: linear-gradient(90deg,#8b5cf6,#06ffa5,#f472b6,#8b5cf6) !important; background-size: 200% 100% !important; animation: gradientMove 0.6s linear infinite; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; }
@@ -324,8 +324,8 @@ export default function App() {
         </div>
         <div id="jogo" className="game-wrapper" style={{ padding: "1px", borderRadius: 22, background: "linear-gradient(135deg, rgba(139,92,246,0.6), rgba(6,255,165,0.35), rgba(244,114,182,0.4), rgba(251,191,36,0.35))", boxShadow: "0 0 0 1px rgba(255,255,255,0.05) inset, 0 0 30px rgba(139,92,246,0.18), 0 0 60px rgba(6,255,165,0.1)" }}>
           <div style={{ borderRadius: 20, overflow: "hidden", background: "radial-gradient(120% 120% at 20% 10%, rgba(139,92,246,0.12), transparent 50%), radial-gradient(100% 100% at 80% 90%, rgba(6,255,165,0.08), transparent 40%), rgba(12,12,18,0.96)", backdropFilter: "blur(20px)", border: "1px solid rgba(255,255,255,0.06)" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", padding: "10px 14px", borderBottom: "1px solid rgba(255,255,255,0.06)", fontSize: 10, opacity: 0.6 }}><div style={{ display: "flex", gap: 6 }}><div style={{ width: 10, height: 10, borderRadius: "50%", background: "#ff5f56" }} /><div style={{ width: 10, height: 10, borderRadius: "50%", background: "#ffbd2e" }} /><div style={{ width: 10, height: 10, borderRadius: "50%", background: "#27c93f" }} /></div><span>Mapa_portfolio.exe</span><span style={{ padding: "2px 8px", borderRadius: 10, background: "rgba(255,255,255,0.06)" }}>VOANDO</span></div>
-            <div style={{ padding: "10px 12px", display: "flex", gap: 8, fontSize: 9 }}><span style={{ padding: "6px 10px", borderRadius: 20, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.08)" }}>🎮 WASD / SETAS PARA MOVER</span><span style={{ padding: "6px 10px", borderRadius: 20, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.08)" }}>COLIDA PARA NAVEGAR</span></div>
+            <div style={{ display: "flex", justifyContent: "space-between", padding: "10px 14px", borderBottom: "1px solid rgba(255,255,255,0.06)", fontSize: 10, opacity: 0.6 }}><span style={{ padding: "2px 8px", borderRadius: 10, background: "rgba(255,255,255,0.06)" }}>VOANDO</span></div>
+            <div style={{ padding: "10px 12px", display: "flex", gap: 8, fontSize: 9 }}><span style={{ padding: "6px 10px", borderRadius: 20, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.08)" }}>USE AS SETAS PARA MOVER</span><span style={{ padding: "6px 10px", borderRadius: 20, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.08)" }}>COLIDA PARA NAVEGAR</span></div>
             <div style={{ position: "relative", height: 360 }}><canvas ref={gameRef} style={{ width: "100%", height: "100%", display: "block" }} />{near && <div style={{ position: "absolute", left: `${(near.x + near.w / 2) * 100}%`, top: `${near.y * 100 - 4}%`, transform: "translate(-50%,-100%)", background: "#fff", color: "#000", padding: "5px 10px", borderRadius: 16, fontSize: 10, fontWeight: 700 }}>Entrando em {near.label}...</div>}</div>
             <div style={{ display: "flex", justifyContent: "center", gap: 6, padding: "10px", borderTop: "1px solid rgba(255,255,255,0.06)", background: "rgba(0,0,0,0.2)" }}>
               {ISLANDS.map(is => (<span key={is.id} style={{ fontSize: 8, letterSpacing: "0.1em", padding: "4px 10px", borderRadius: 20, background: near?.id === is.id ? `${is.color}22` : "rgba(255,255,255,0.04)", border: `1px solid ${near?.id === is.id ? is.color + "66" : "rgba(255,255,255,0.08)"}`, color: near?.id === is.id ? is.color : "rgba(255,255,255,0.45)", boxShadow: near?.id === is.id ? `0 0 10px ${is.color}44` : "none" }}>{is.label}</span>))}
