@@ -33,13 +33,13 @@ const PROJECTS = [
     id: "02",
     title: "Landing Page - ANIMEWEAR",
     desc: "Landing page fictícia de uma loja de camisas de anime. Inspirada na mesma estrutura do projeto Meow Café, mas com identidade totalmente nova voltada para o público geek. Foco em conversão com botões com micro-interações, grade de produtos responsiva e hero com modelo vestindo a peça.",
-    stack: ["HTML5", "CSS3"],
+    stack: ["HTML5", "CSS3","Javascript","React"],
     color: "#06ffa5",
-    github: "https://github.com/thiagoanchietapaiva-cloud/LojaGeek.git",
+    github: "https://github.com/thiagoanchietapaiva-cloud/React-Anime-Wear",
     demo: "https://lojageek.onrender.com"
   },
   {
-    id: "03", title: "Online Stores - Loja ", desc: "Aplicação web de e-commerce construída do zero utilizando React. Este projeto demonstra a criação de uma loja virtual completa e escalável, com foco em design responsivo, navegação intuitiva e transições suaves entre páginas. Inclui recursos como catálogo de produtos dinâmico, sistema de busca eficiente e persistência de dados no carrinho.", stack: ["HTML5", "CSS3","Javascript","React"], color: "#f472b6",
+    id: "03", title: "Online Stores - Loja ", desc: "Aplicação web de e-commerce construída do zero utilizando React. Este projeto demonstra a criação de uma loja virtual completa e escalável, com foco em design responsivo. Inclui recursos como catálogo de produtos, sistema de busca e persistência de dados no carrinho.", stack: ["HTML5", "CSS3","Javascript","React"], color: "#f472b6",
     github: "https://github.com/thiagoanchietapaiva-cloud/reactFakeStore",
     demo: "https://reactfakestore.onrender.com/"
   },
