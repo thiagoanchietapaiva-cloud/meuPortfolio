@@ -39,9 +39,9 @@ const PROJECTS = [
     demo: "https://lojageek.onrender.com"
   },
   {
-    id: "03", title: "Linktree Responsivo", desc: "Página de links pessoal inspirada no Linktree, desenvolvida com HTML semântico e CSS puro. Design minimalista com avatar, redes sociais (Instagram, GitHub e WhatsApp) e botões de call-to-action.", stack: ["HTML5", "CSS3"], color: "#f472b6",
-    github: "https://github.com/thiagoanchietapaiva-cloud/html-css-linktree.git",
-    demo: "https://html-css-linktree-0d7k.onrender.com"
+    id: "03", title: "Online Stores - Loja ", desc: "Aplicação web de e-commerce construída do zero utilizando React. Este projeto demonstra a criação de uma loja virtual completa e escalável, com foco em design responsivo, navegação intuitiva e transições suaves entre páginas. Inclui recursos como catálogo de produtos dinâmico, sistema de busca eficiente e persistência de dados no carrinho.", stack: ["HTML5", "CSS3","Javascript","React"], color: "#f472b6",
+    github: "https://github.com/thiagoanchietapaiva-cloud/reactFakeStore",
+    demo: "https://reactfakestore.onrender.com/"
   },
 ];
 
