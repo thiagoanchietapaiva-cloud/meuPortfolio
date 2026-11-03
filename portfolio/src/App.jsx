@@ -22,24 +22,28 @@ const SKILLS = [
 const PROJECTS = [
   {
     id: "01",
-    title: "Landing Page - MeowCafé",
-    desc: "Landing page responsiva feita com HTML5 e CSS3 puro, sem frameworks. Layout moderno com foco em conversão, animações suaves e 100% responsiva.",
-    stack: ["HTML5", "CSS3"],
-    color: "#8b5cf6",
-    github: "https://github.com/thiagoanchietapaiva-cloud/html-css-landing-page",
-    demo: "https://meow-t5cd.onrender.com"
+    title: "Fresh Tomatoes - Avaliação de Filmes",
+    desc: "Aplicação web de filmes feita com React e Tailwind CSS, consumindo a API do TMDB para listar lançamentos, populares e mais bem avaliados, com busca, página de detalhes e nota em tomates. Conta com cadastro e login de usuários através de uma API própria, desenvolvida por mim em Node.js e Express, que armazena e-mail, usuário e senha.",
+    stack: ["React", "Tailwind CSS", "Vite", "React Router", "API TMDB", "Node.js", "Express", "Prisma", "PostgreSQL"],
+    color: "#f97316",
+    github: "https://github.com/thiagoanchietapaiva-cloud/Frash-Tomates-2.1",
+    demo: "https://react-todolist-35pu.onrender.com"
   },
   {
     id: "02",
     title: "Landing Page - ANIMEWEAR",
     desc: "Landing page fictícia de uma loja de camisas de anime. Inspirada na mesma estrutura do projeto Meow Café, mas com identidade totalmente nova voltada para o público geek. Foco em conversão com botões com micro-interações, grade de produtos responsiva e hero com modelo vestindo a peça.",
-    stack: ["HTML5", "CSS3","Javascript","React"],
+    stack: ["HTML5", "CSS3", "Javascript", "React"],
     color: "#06ffa5",
     github: "https://github.com/thiagoanchietapaiva-cloud/React-Anime-Wear",
     demo: "https://lojageek.onrender.com"
   },
   {
-    id: "03", title: "Online Stores - Loja ", desc: "Aplicação web de e-commerce construída do zero utilizando React. Este projeto demonstra a criação de uma loja virtual completa e escalável, com foco em design responsivo. Inclui recursos como catálogo de produtos, sistema de busca e persistência de dados no carrinho.", stack: ["HTML5", "CSS3","Javascript","React"], color: "#f472b6",
+    id: "03",
+    title: "Online Stores - Loja ",
+    desc: "Aplicação web de e-commerce construída do zero utilizando React. Este projeto demonstra a criação de uma loja virtual completa e escalável, com foco em design responsivo. Inclui recursos como catálogo de produtos, sistema de busca e persistência de dados no carrinho.",
+    stack: ["HTML5", "CSS3", "Javascript", "React"],
+    color: "#f472b6",
     github: "https://github.com/thiagoanchietapaiva-cloud/reactFakeStore",
     demo: "https://reactfakestore.onrender.com/"
   },
@@ -359,9 +363,9 @@ export default function App() {
 
       <section id="projetos" style={{ maxWidth: 1200, margin: "0 auto", padding: "20px 20px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}><div style={{ width: 32, height: 32, borderRadius: 8, background: "#06ffa5", display: "grid", placeItems: "center", color: "#000" }}></div><h2 style={{ fontSize: 24, fontWeight: 800 }}>PROJETOS</h2><div style={{ flex: 1, height: 1, background: "linear-gradient(90deg,rgba(6,255,165,0.3),transparent)", marginLeft: 12 }} /></div>
-        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(3,1fr)", gap: 14 }}>
+        <div className="projects-grid" style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(3, minmax(0, 1fr))", gap: 14 }}>
           {PROJECTS.map(p => (
-            <div key={p.id} className="glass project-card" style={{ padding: 18 }}>
+            <div key={p.id} className="glass project-card" style={{ padding: 18, display: "flex", flexDirection: "column" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <div style={{ width: 36, height: 36, borderRadius: 10, background: p.color, color: "#000", display: "grid", placeItems: "center", fontWeight: 800, fontSize: 12 }}>{p.id}</div>
                 <div style={{ display: "flex", gap: 6 }}>
@@ -374,7 +378,7 @@ export default function App() {
                 </div>
               </div>
               <div style={{ fontWeight: 700, marginTop: 12 }}>{p.title}</div><div style={{ fontSize: 11, opacity: 0.6, marginTop: 8, lineHeight: 1.5 }}>{p.desc}</div>
-              <div style={{ display: "flex", gap: 6, marginTop: 12 }}>{p.stack.map(s => <span key={s} style={{ fontSize: 9, padding: "4px 8px", borderRadius: 12, background: "rgba(255,255,255,0.06)", border: `1px solid ${p.color}30`, color: p.color }}>{s}</span>)}</div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: "auto", paddingTop: 12 }}>{p.stack.map(s => <span key={s} style={{ fontSize: 9, padding: "4px 8px", borderRadius: 12, background: "rgba(255,255,255,0.06)", border: `1px solid ${p.color}30`, color: p.color }}>{s}</span>)}</div>
             </div>
           ))}
         </div>
