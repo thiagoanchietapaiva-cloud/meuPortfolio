@@ -398,7 +398,7 @@ export default function App() {
       </section>
 
       <section id="contato" style={{ maxWidth: 1200, margin: "0 auto", padding: "20px 20px 60px" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}><div style={{ width: 32, height: 32, borderRadius: 8, background: "#fbbf24", display: "grid", placeItems: "center", color: "#000" }}></div><h2 style={{ fontSize: 24, fontWeight: 800 }}>CONTATO</h2><div style={{ flex: 1, height: 1, background: "linear-gradient(90deg,rgba(251,191,36,0.3),transparent)", marginLeft: 12 }} /><span style={{ fontSize: 10, opacity: 0.4 }}>EASTER EGG: digite "dev"</span></div>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}><div style={{ width: 32, height: 32, borderRadius: 8, background: "#fbbf24", display: "grid", placeItems: "center", color: "#000" }}></div><h2 style={{ fontSize: 24, fontWeight: 800 }}>CONTATO</h2><div style={{ flex: 1, height: 1, background: "linear-gradient(90deg,rgba(251,191,36,0.3),transparent)", marginLeft: 12 }} /></div>
         <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1.2fr 0.8fr", gap: 16 }}>
           <div className="glass" style={{ padding: 18 }}>
             <div style={{ fontSize: 10, letterSpacing: "0.15em", opacity: 0.4, marginBottom: 12 }}>FORMULÁRIO • FUNCIONANDO</div>
