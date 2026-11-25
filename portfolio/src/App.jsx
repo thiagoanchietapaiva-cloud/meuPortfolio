@@ -31,12 +31,12 @@ const PROJECTS = [
   },
   {
     id: "02",
-    title: "Landing Page - ANIMEWEAR",
-    desc: "Landing page fictícia de uma loja de camisas de anime. Inspirada na mesma estrutura do projeto Meow Café, mas com identidade totalmente nova voltada para o público geek. Foco em conversão com botões com micro-interações, grade de produtos responsiva e hero com modelo vestindo a peça.",
-    stack: ["HTML5", "CSS3", "Javascript", "React"],
+    title: "Tetos - Gerenciamento de Imóveis",
+    desc: "Sistema web de gerenciamento de imóveis construído do zero utilizando React. Este projeto demonstra a criação de um dashboard administrativo completo e escalável, com foco em organização e produtividade. Inclui cadastro de imóveis, locatários, usuários, níveis de acesso e histórico de locações, com controle de aluguel, IPTU e condomínio, busca rápida, gráficos e navegação protegida por login.",
+    stack: ["React", "Ant Design", "React Router", "Node.js", "Express", "Prisma", "PostgreSQL"],
     color: "#06ffa5",
-    github: "https://github.com/thiagoanchietapaiva-cloud/React-Anime-Wear",
-    demo: "https://lojageek.onrender.com"
+    github: "https://github.com/thiagoanchietapaiva-cloud/tetos-front",
+    demo: "https://tetos-front.onrender.com/"
   },
   {
     id: "03",
