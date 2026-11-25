@@ -47,6 +47,33 @@ const PROJECTS = [
     github: "https://github.com/thiagoanchietapaiva-cloud/reactFakeStore",
     demo: "https://reactfakestore.onrender.com/"
   },
+  {
+  id: "04",
+  title: "Loja Geek - Anime Wear",
+  desc: "Aplicação web de e-commerce geek construída do zero utilizando React. Este projeto demonstra a criação de uma loja virtual completa com foco em produtos de anime, com catálogo de produtos, sistema de busca, página de detalhes e carrinho de compras com persistência de dados. Inclui design responsivo e navegação entre categorias.",
+  stack: ["React", "Tailwind CSS", "Vite", "React Router", "JavaScript"],
+  color: "#3b82f6",
+  github: "https://github.com/thiagoanchietapaiva-cloud/React-Anime-Wear",
+  demo: "https://lojageek.onrender.com"
+},
+{
+  id: "05",
+  title: "LinkTree 2.0 - Links Pessoais",
+  desc: "Aplicação web de página de links construída do zero utilizando React. Este projeto demonstra a criação de uma página personalizada para agrupar todos os links importantes em um só lugar, com foco em design limpo e responsivo. Inclui foto de perfil, bio, botões de redes sociais e links para projetos, portfólio e contato.",
+  stack: ["React", "Tailwind CSS", "Vite", "JavaScript"],
+  color: "#eab308",
+  github: "https://github.com/thiagoanchietapaiva-cloud/LinkTree-2.0",
+  demo: "https://linktree-2-0.onrender.com"
+},
+{
+  id: "06",
+  title: "ToDoList 2.0 - Lista de Tarefas",
+  desc: "Aplicação web de lista de tarefas construída do zero utilizando React. Este projeto demonstra a criação de um gerenciador de tarefas completo e funcional, com foco em produtividade e organização. Inclui criar, editar, concluir e excluir tarefas, com filtro por status e persistência de dados para não perder as tarefas ao recarregar a página.",
+  stack: ["React", "Tailwind CSS", "Vite", "JavaScript"],
+  color: "#a855f7",
+  github: "https://github.com/thiagoanchietapaiva-cloud/react-ToDoList2.0",
+  demo: "https://react-todolist2-0.onrender.com/"
+},
 ];
 
 export default function App() {
